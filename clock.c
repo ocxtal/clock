@@ -145,6 +145,8 @@ int main(int argc, char *argv[])
 		double rh = 2.0 * pi * lt->tm_hour / 12.0;
 		double rm = 2.0 * pi * lt->tm_min / 60.0;
 		double rs = 2.0 * pi * lt->tm_sec / 60.0;
+		rh += rm / 12.0;
+		rm += rs / 60.0;
 		/* redraw */
 		for(i = 0; i < 12; i++) {
 			draw_polar_line(d, 1, cx, cy, 0.8 * r, 0.95 * r, 2.0 * pi * i / 12.0);
