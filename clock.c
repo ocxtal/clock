@@ -135,7 +135,7 @@ int main(int argc, char *argv[])
 	d = draw_init(setpixel);
 	cx = COLS / 4;
 	cy = LINES / 2;
-	r = 8 * (cx < cy ? cx : cy) / 10;
+	r = 9 * (cx < cy ? cx : cy) / 10;
 	erase();
 	draw_circle(d, 1, COLS/4, LINES/2, r);
 	refresh();
