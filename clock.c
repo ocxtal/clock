@@ -40,7 +40,7 @@ void draw_line_bresenham(draw_t const *d, int color, int sx, int sy, int ex, int
 	if(steep) { swap(sx, sy); swap(ex, ey); swap(dx, dy); }
 	if(dx >= 0) { xs = 1; } else { xs = -1; dx = -dx; }
 	if(dy >= 0) { ys = 1; } else { ys = -1; dy = -dy; }
-	int e = 2*dy - dx, x, y = sy, xd, yd, xx, yy;
+	int e = 2*dy - dx, x, y = sy, xx, yy;
 	for(x = sx; x != ex; x += xs) {
 		if(steep) { xx = y; yy = x; } else { xx = x; yy = y; }
 		d->setpixel(color, xx, yy);
